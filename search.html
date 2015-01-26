@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/js/app.js" ></script>
+    </head>
+
+<body>
+
+<div ng-app="myApp" ng-controller="myCrl">
+    <ul>
+        <p><input type="text" ng-model="search"></p>
+        <li ng-repeat="result in results | filter: {result.title.$t: search}">
+            {{result.title.$t}}
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html> 
